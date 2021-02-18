@@ -1,0 +1,292 @@
+\documentclass{beamer}
+
+\input{preamble}
+
+\usepackage{beamer_digiPH}
+\usepackage{comment}
+\usepackage{lipsum}
+
+\title{\#Lorem Ipsum}
+\author{Muhammad Uliah Shafar}
+\institute[Lehrstuhl]{
+	Name des Lehrstuhls \\
+	Name des Instituts/Fachbereichs \\
+	Name der Universität, Ort
+}
+\mode<presentation>{\keywords{Schlüsselwörter durch Komma getrennt}}
+\date[09.04.2018]{Datum der Präsentation, \zB 9. April 2018}
+
+\begin{document}
+
+\begin{withoutheadline}
+%\begin{frame}
+%	% Schriftgröße verkleinern
+%	\small
+%	% Absatzabstand einstellen
+%	\setlength{\parskip}{0.75\baselineskip}
+%
+%	Dies ist die eLectures-Präsentationsvorlage der Virtuellen PH.
+%
+%	Die kommenden Folien in \LaTeX\ können und \textbf{\emph{sollen} Sie nach Wunsch adaptieren}, wir bitten Sie aber, sich alle genau anzusehen und durchzulesen! Denn:
+%
+%	Auf jeder Folie finden Sie Anregungen, Hilfestellungen und Hinweise, sowohl für die inhaltlich-didaktische Vorbereitung als auch die Präsentation online. Zumindest die vorhergehende Titelfolie sollte bitte auf jeden Fall in dieser Form Verwendung finden (Wiedererkennungswert!)
+%
+%	Bitte senden Sie Ihre überarbeitete PDF-Datei \textbf{vor dem gemeinsamen Testtermin} direkt an Ihre/n Co-Moderator/in. Er/sie bespricht sie mit Ihnen und lädt sie für die eLecture im Raum hoch. Der Kontakt zur Co-Moderation wird aktiv von dieser hergestellt.
+%
+%	\begin{block}{Zur didaktischen Planung der Stunde:}
+%		Eine eLecture-Stunde geht oft sehr schnell vorbei! Gehen Sie daher bitte von max. \SI{75}{\percent} der Zeit für Ihre Präsentation aus, der Rest ist meist durch Einführung und Vorstellung, Interaktion, Rückfragen und Abschluss belegt. Je interaktiver Sie die eLecture halten, desto besser: besprechen Sie sich mit Ihrer CoModeration!
+%	\end{block}
+%\end{frame}
+
+\begin{frame}
+	%\maketitle
+	% \maketitle funktioniert auch im Article-Modus
+	 \titlepage
+\end{frame}
+\end{withoutheadline}
+
+\miniframesoff
+\begin{frame}[label=inhalt]{Overview}
+	\tableofcontents
+\end{frame}
+\miniframeson
+
+\section{Lorem}
+\subsection*{}
+
+\begin{frame}{Lorem Ipsum}
+Menurut \cite{setyowati2013}, \lipsum[1-1]
+%
+%	\begin{block}{Zur Didaktik: Ablauf und Lernziele zu Beginn sind sehr wichtig!\\
+%		\small Folgendes gilt aber auch für alle anderen Auflistungen:}
+%		\end{block}
+\end{frame}
+
+\begin{frame}{Lorem Ipsum}
+\vspace{4pt}
+	\begin{itemize}
+\item \lipsum[10][1-2]
+\item \lipsum[1][1-2]
+	\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Lorem Ipsum}
+	\begin{center}
+		\includegraphics[height=5.5cm]{figures/placeholder}
+
+		{\tiny \textcolor{digiPH_darkorange}{\lipsum[1][1] \url{penulis}}}
+	\end{center}
+	\begin{center}
+		\textbf{Lorem Lipsum} \lipsum[1][1]
+
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=5.5cm]{figures/placeholder}
+		{\tiny \textcolor{digiPH_darkorange}{\lipsum[1][1] \url{penulis}}}
+	\end{center}
+	\begin{center}
+		{\small\textbf{Lorem Lipsum} \lipsum[1][1]}
+	\end{center}
+\end{frame}
+
+
+\section{Lorem}
+\subsection*{}
+
+
+\begin{frame}{Lorem Ipsum}
+	\small \lipsum[1][1-2]
+%	\tiny Weiteres dazu entnehmen Sie bitte dem Infoblatt: \url{http://www.virtuelle-ph.at/selbst-electures-abhalten/infoblatt}
+
+%	\small Die Teilnehmenden werden über einen Disclaimer zu Beginn der eLecture darüber informiert:
+
+	\begin{center}
+		\includegraphics[height=5cm]{figures/placeholder}
+
+		{\tiny \textcolor{digiPH_darkorange}{Sumber: Penulis, \href{https://creativecommons.org/licenses/by/3.0/at/}{CC BY}}}
+	\end{center}
+\end{frame}
+
+%	\tiny Weiteres dazu entnehmen Sie bitte dem Infoblatt: \url{http://www.virtuelle-ph.at/selbst-electures-abhalten/infoblatt}
+
+%	\small Die Teilnehmenden werden über einen Disclaimer zu Beginn der eLecture darüber informiert:
+
+%-------------------------------------------------------------------------------------
+%\begin{comment}
+\section{Lorem}
+\subsection*{}
+
+\begin{frame}{Highlight}
+	\begin{center}
+		\Large
+		online immer lieber {\Huge mehr} als weniger\\
+		und häufig wechseln!
+	\end{center}
+	\pause
+	\begin{center}
+		\Large
+		Das bringt Abwechslung und Bewegung\\auf
+        den Bildschirm und hilft,\\
+        {\Huge Aufmerksamkeit} zu {\Huge halten}.
+	\end{center}
+\end{frame}
+
+\begin{frame}{Kolom gambar dan teks}
+	\begin{columns}
+		\begin{column}{5cm}
+			\begin{center}
+				\includegraphics[height=6cm]{figures/chamaeleon_hochformat}
+
+				{\tiny \textcolor{digiPH_darkorange}{Bildquelle: \url{pixabay.com}, CC-0}}
+			\end{center}
+		\end{column}
+		\begin{column}{5cm}
+			\begin{center}
+				\Large
+				Bitte mit Bedacht!
+			\end{center}
+			\pause
+			\begin{center}
+				Nicht mehr als ein bis zwei verschiedene Schriftfarben verwenden (Ruhe, bessere Lesbarkeit).
+			\end{center}
+			\begin{center}
+				Tipp: Lieber durch Bilder Abwechslung schaffen!
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	%Gambar besar dengan penjelasan tanpa judul
+	\begin{center}
+		\includegraphics[height=6cm]{figures/kopfhoerer}
+
+		{\tiny \textcolor{digiPH_darkorange}{Nicht die Bildquelle und die Lizenz vergessen! Bildquelle: \url{pixabay.com}, CC-0}}
+	\end{center}
+	\begin{center}
+		Haben Sie Mut zur Vereinfachung und zu ungewohnter Positionierung und finden Sie interessante Ausschnitte.
+	\end{center}
+\end{frame}
+
+\begin{frame}{Gambar besar dengan judul dan penjelasan}
+	\begin{center}
+		\includegraphics[height=5.5cm]{figures/placeholder}
+
+		{\tiny \textcolor{digiPH_darkorange}{Bildquelle: \url{pixabay.com}, CC-0}}
+	\end{center}
+	\begin{center}
+		Geschlechtsneutrales Formulieren ist uns wichtig: bei unseren eLectures ebenso. \textbf{In Schrift, Wort und Bild!}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}{Gambar dengan penjelasan sebelumnya}
+	\small Ihre eLecture wird zum Nachsehen aufgezeichnet und veröffentlicht. Deshalb muss sie inhaltlich und urheberrechtlich korrekt sein!
+
+	\tiny Weiteres dazu entnehmen Sie bitte dem Infoblatt: \url{http://www.virtuelle-ph.at/selbst-electures-abhalten/infoblatt}
+
+	\small Die Teilnehmenden werden über einen Disclaimer zu Beginn der eLecture darüber informiert:
+
+	\begin{center}
+		\includegraphics[height=3.5cm]{figures/placeholder}
+
+		{\tiny \textcolor{digiPH_darkorange}{Bildquelle: Lene Kieberl, \href{https://creativecommons.org/licenses/by/3.0/at/}{CC BY}}}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}{Kolom dengan foto orang}
+	\begin{columns}
+		\begin{column}{5cm}
+			\small besonders aber bei Minderjährigen bitte unbedingt abklären, ob diese bzw. ihre Erziehungsberechtigten mit der Veröffentlichung einverstanden sind (Recht am eigenen Bild).
+		\end{column}
+		\begin{column}{5cm}
+			\begin{center}
+				\includegraphics[height=2.5cm]{figures/placeholder}
+
+				{\tiny \textcolor{digiPH_darkorange}{Bildquelle: Details Foto XY, \url{pixabay.com}, CC-0}}
+			\end{center}
+		\end{column}
+	\end{columns}
+	\begin{columns}
+		\begin{column}{5cm}
+			\begin{center}
+				\includegraphics[width=5cm]{figures/placeholder}
+
+				{\tiny \textcolor{digiPH_darkorange}{Bildquelle: Details Foto XY, \url{pixabay.com}, CC-0}}
+			\end{center}
+		\end{column}
+		\begin{column}{5cm}
+			\begin{block}{\small Tipp:}
+				\scriptsize
+				Als Hilfestellung können Sie vielleicht unseren \enquote{Schummelzettel OER} mit Tipps und Quellen für verwendbare Bilder nutzen, den Sie hier zum Download vorfinden:\\
+				\url{http://www.virtuelle-ph.at/schummelzettel}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Sie möchten Software/Seiten live vorzeigen?}
+	% Schriftgröße verkleinern
+	\scriptsize
+	% Absatzabstand einstellen
+	\setlength{\parskip}{0.75\baselineskip}
+
+	Beachten Sie bitte, dass Sie beim Zeigen von längeren Ausschnitten einer \textbf{Programmoberfläche} (Vorzeigen von Abläufen die nicht mehr durch das Zitatrecht abgedeckt sind) gegebenenfalls die \textbf{Erlaubnis der Herstellerfirma einholen müssen}, sofern Sie nicht Urheber/in sind bzw. keine lizenzrechtliche Erlaubnis zur Vorführung vorliegt (mehr Info: \url{http://bit.ly/vphuhr}).
+
+	\textbf{Diese Angabe kann Ihre Co-Moderation für Sie einblenden, bitte teilen Sie sie bei Testtermin oder via Email mit.}
+
+	\begin{block}{\scriptsize Beispiel: Live-Demo \href{GIMP}{http://www.gimp.org/},GNU General Public License 29.01.2018}
+		\centering
+		\includegraphics[height=4cm]{figures/placeholder}
+	\end{block}
+\end{frame}
+
+%\end{comment}
+%\begin{comment}
+
+% Hanya untuk Navigasi Miniframe
+\miniframesoff
+\begin{frame}<beamer>{}
+	\begin{center}
+		\ldots Manege frei für Ihr Knowhow und Ihre Folien!
+	\end{center}
+	\vspace{3cm}
+	\tiny
+	PS: Am Ende Ihrer eLecture weist Ihre Co-Moderation die Teilnehmenden noch auf weitere Angebote (\zB der aktuellen Online-Tagung) und die Social-Media-Präsenzen hin. Wir bitten Sie auch um Weiterverbreitung unseres (und Ihres!) Lernangebots. Selbst schon geliked? Wir freuen uns über Likes, Kommentare und natürlich Follower!
+\end{frame}
+%\end{comment}
+
+%\begin{frame}{\enquote{Stopfen} Gambar dengan qoute digambar \ldots}
+%	\framesubtitle{Arbeiten Sie mit Bildern: online lieber mehrere, weniger dichte Folien zeigen!}
+%	\begin{center}
+%		\begin{tikzpicture}
+%			\node[anchor=south west,inner sep=0] (bild) at (0,0) {\includegraphics[width=0.88\textwidth]{figures/placeholder}};
+%			\begin{scope}[x=(bild.south east),y=(bild.north west)]
+%				% Gitternetz einzeichnen
+%				%\draw[help lines] (0,0) grid[xstep=0.1,ystep=0.1] (1,1);
+%				% Text einfügen
+%				\node[font=\scriptsize,align=left,color=white,text width=4cm] (text) at (0.79,0.3) {Bitte verwenden Sie ausschließlich urheberrechts-einwandfreies Bildmaterial (NoGo: Schulbücher!)\\
+%				Am besten also: eigenes und/oder CC-Bildmaterial, \zB von \url{www.pixabay.com} oder ähnlichen Plattformen!\\
+%				Bitte nie eine sichtbare Bildquelle und Lizenz vergessen.};
+%			\end{scope}
+%		\end{tikzpicture}
+%
+%		{\tiny \textcolor{digiPH_darkorange}{Bildquelle: David Bogner, 2015, \href{https://creativecommons.org/licenses/by-nc-sa/3.0/at/}{CC BY-NC-SA}}}
+%	\end{center}
+%\end{frame}
+
+\begin{frame}<beamer>{}
+\bibliographystyle{apalike}
+{\tiny
+\bibliography{biblio.bib}
+}
+\end{frame}
+
+\end{document}

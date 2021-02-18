@@ -1,0 +1,61 @@
+% mathematische Formeln mit Serifen setzen
+%\usefonttheme[onlymath]{serif}
+
+% andere Schriftart verwenden, sonst gibt es eine Warnung
+%\usepackage{lmodern}
+
+% Miniframe-Navigation aktivieren
+\useoutertheme[subsection=false]{miniframes}
+
+% This theme is nearly a black and white theme and useful for creating presentations that are easy to print on a black-and-white printer. The theme uses grayscale in certain unavoidable cases, but never color. It also changes the font of alerted text to bold face.
+\usecolortheme{dove}
+
+% orange Farbe definieren
+\definecolor{digiPH_orange}{rgb}{1,0.753,0}
+\definecolor{digiPH_darkorange}{rgb}{0.808,0.451,0.216}
+\definecolor{digiPH_blue}{rgb}{0.357,0.608,0.835}
+
+% Farben anpassen
+\setbeamercolor{section number projected}{bg=digiPH_darkorange}
+%\setbeamercolor{frametitle}{fg=digiPH_darkorange,bg=white}
+\setbeamercolor{itemize item}{fg=digiPH_darkorange}
+\setbeamercolor{itemize subitem}{fg=digiPH_darkorange}
+\setbeamercolor{enumerate item}{fg=digiPH_darkorange}
+\setbeamercolor{enumerate subitem}{fg=digiPH_darkorange}
+\setbeamercolor{caption name}{fg=digiPH_darkorange}
+\setbeamercolor{block title}{fg=digiPH_blue}
+\setbeamercolor{mini frame}{fg=digiPH_orange}
+\setbeamercolor{section in head/foot}{fg=digiPH_darkorange}
+\setbeamercolor{section in toc shaded}{fg=digiPH_darkorange!50}
+\setbeamercolor{section in toc}{fg=digiPH_darkorange!150}
+\setbeamercolor{subsection in toc shaded}{fg=digiPH_darkorange!50}
+\setbeamercolor{subsection in toc}{fg=digiPH_darkorange!150}
+
+% Navigationssymbole ausschalten
+\setbeamertemplate{navigation symbols}{}
+
+\newenvironment{withoutheadline}{%
+	\setbeamercolor{background canvas}{bg=white}
+	\setbeamertemplate{headline}[default]%
+	\def\beamer@entrycode{\vspace*{-\headheight}}%
+	\setbeamertemplate{footline}{}
+}{}
+
+% Titelseite
+\setbeamertemplate{title page}{%
+	% obere Logos
+	\includegraphics[width=2.5cm]{logos/logo2}%
+	\hfill
+	\includegraphics[width=1.5cm]{logos/logo}
+	% vertikaler Abstand
+	\vskip0pt plus 1fill
+
+	% Titel
+	\colorbox{digiPH_orange}{\begin{minipage}{.95\textwidth}
+		\usebeamerfont{title}\inserttitle\par
+	\end{minipage}}
+
+	% unteres Logo
+	\includegraphics[width=8cm]{logos/hor_logo}
+
+}
