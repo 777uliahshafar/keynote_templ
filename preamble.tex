@@ -35,6 +35,12 @@
 \usepackage{xfrac}
 \UseCollection{xfrac}{plainmath}
 
+% Config Slide Notes
+\usepackage{pgfpages}
+
+\setbeamercovered{transparent}
+\setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}\usepackage{palatino}
+
 %----------------------------------------------------------------------------------------
 %           SOMETHING ABOUT LABELING
 %----------------------------------------------------------------------------------------
@@ -213,4 +219,3 @@
 \newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
 \newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
 \makeatother
-

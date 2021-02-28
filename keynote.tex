@@ -2,6 +2,10 @@
 
 \input{preamble}
 
+\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+%\setbeameroption{show notes on second screen=right} % Both
+
 \usepackage{beamer_digiPH}
 \usepackage{comment}
 \usepackage{lipsum}
@@ -52,7 +56,6 @@
 \miniframeson
 
 \section{Lorem}
-\subsection*{}
 
 \begin{frame}{Lorem Ipsum}
 Menurut \cite{setyowati2013}, \lipsum[1-1]
@@ -97,7 +100,6 @@ Menurut \cite{setyowati2013}, \lipsum[1-1]
 
 
 \section{Lorem}
-\subsection*{}
 
 
 \begin{frame}{Lorem Ipsum}
@@ -120,7 +122,6 @@ Menurut \cite{setyowati2013}, \lipsum[1-1]
 %-------------------------------------------------------------------------------------
 %\begin{comment}
 \section{Lorem}
-\subsection*{}
 
 \begin{frame}{Highlight}
 	\begin{center}
@@ -200,6 +201,17 @@ Menurut \cite{setyowati2013}, \lipsum[1-1]
 	\end{center}
 \end{frame}
 
+\begin{frame}[t]{Tiga Gambar}
+
+\hfil\hfil\includegraphics[width=5cm]{figures/placeholder}\newline
+  \null\hfil\hfil\makebox[5cm]{Lorem}\newline
+  \vfil
+  \hfil\hfil{\includegraphics[width=5cm]{figures/placeholder}}\hfil\hfil
+    {\includegraphics[width=5cm]{figures/placeholder}}\newline
+  \null\hfil\hfil{\makebox[5cm]{Lorem}}
+    \hfil\hfil{\makebox[5cm]{Lorem}}
+
+\end{frame}
 
 \begin{frame}{Kolom dengan foto orang}
 	\begin{columns}
