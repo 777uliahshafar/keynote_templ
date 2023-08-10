@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\input{preamble}
+\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+%\setbeameroption{show notes on second screen=right} % Both
+
+% META
+\title{\#Lorem Ipsum}
+\author{Muhammad Uliah Shafar}
+\institute[Lehrstuhl]{
+	Name des Lehrstuhls \\
+	Name des Instituts/Fachbereichs \\
+	Name der Universität, Ort
+}
+\mode<presentation>{\keywords{Schlüsselwörter durch Komma getrennt}}
+\date[09.04.2018]{Datum der Präsentation, \zB 9. April 2018}
+
+\begin{document}
+
+% PREFACE
+\subfile{./subfiles/preface.tex}
+
+% TOC
+\miniframesoff
+\begin{frame}[label=inhalt]{Overview}
+	\tableofcontents
+\end{frame}
+\miniframeson
+
+% CONTENT
+% \subfile{./subfiles/frontmatter.tex}
+\subfile{./subfiles/principaltext.tex}
+% \subfile{./subfiles/backmatter.tex}
+
+\begin{frame}<beamer>{}
+	\bibliographystyle{apalike}
+	{\tiny
+		\bibliography{biblio.bib}
+	}
+\end{frame}
+
+\end{document}

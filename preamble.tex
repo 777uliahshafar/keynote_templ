@@ -1,4 +1,6 @@
 %! TeX program = pdflatex
+
+\usepackage{beamer_digiPH}
 \usepackage[english]{babel}
 
 
@@ -16,6 +18,9 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
+
+\usepackage{comment}
+\usepackage{lipsum}
 
 \usepackage{graphicx}
 \graphicspath{{figures/}{../figures/}{../logos}}
@@ -50,9 +55,9 @@
 \newenvironment{labeling}[2][]{%
 	\def\sc@septext{#1}%
 	\list{}{\settowidth{\labelwidth}{{%
-		#2%
-			\sc@septext%
-		}}%
+					#2%
+					\sc@septext%
+				}}%
 		\leftmargin\labelwidth \advance\leftmargin by \labelsep
 		\let\makelabel\labelinglabel
 	}%
@@ -79,61 +84,61 @@
 \mode<beamer>{
 	\pgfplotsset{
 		beamer/.style={
-			width=0.8\textwidth,
-			height=0.45\textwidth,
-			legend style={font=\scriptsize},
-			tick label style={font=\footnotesize},
-			label style={font=\small},
-			max space between ticks=28,
-		}
+				width=0.8\textwidth,
+				height=0.45\textwidth,
+				legend style={font=\scriptsize},
+				tick label style={font=\footnotesize},
+				label style={font=\small},
+				max space between ticks=28,
+			}
 	}
 }
 \mode<handout>{
 	\pgfplotsset{
 		beamer/.style={
-			width=0.8\textwidth,
-			height=0.45\textwidth,
-			legend style={font=\scriptsize},
-			tick label style={font=\footnotesize},
-			label style={font=\small},
-			max space between ticks=25,
-		}
+				width=0.8\textwidth,
+				height=0.45\textwidth,
+				legend style={font=\scriptsize},
+				tick label style={font=\footnotesize},
+				label style={font=\small},
+				max space between ticks=25,
+			}
 	}
 }
 \mode<article>{
 	\pgfplotsset{
 		beamer/.style={
-			width=0.8\textwidth,
-			height=0.45\textwidth,
-			max space between ticks=35,
-		}
+				width=0.8\textwidth,
+				height=0.45\textwidth,
+				max space between ticks=35,
+			}
 	}
 }
 % neue Größenvorlage für zwei Plots nebeneinander anlegen
 \pgfplotsset{
 	scriptsize/.style={
-		width=0.34\textwidth,
-		height=0.1768\textwidth,
-		legend style={font=\scriptsize},
-		tick label style={font=\scriptsize},
-		label style={font=\footnotesize},
-		title style={font=\footnotesize},
-		every axis title shift=0pt,
-		max space between ticks=25,
-		every mark/.append style={mark size=7},
-		major tick length=0.1cm,
-		minor tick length=0.066cm,
-	}
+			width=0.34\textwidth,
+			height=0.1768\textwidth,
+			legend style={font=\scriptsize},
+			tick label style={font=\scriptsize},
+			label style={font=\footnotesize},
+			title style={font=\footnotesize},
+			every axis title shift=0pt,
+			max space between ticks=25,
+			every mark/.append style={mark size=7},
+			major tick length=0.1cm,
+			minor tick length=0.066cm,
+		}
 }
 \pgfplotsset{
 	small/.style={
-		width=6.5cm,
-		height=,
-		tick label style={font=\footnotesize},
-		label style={font=\small},
-		legend style={font=\footnotesize},
-		max space between ticks=30,
-	}
+			width=6.5cm,
+			height=,
+			tick label style={font=\footnotesize},
+			label style={font=\small},
+			legend style={font=\footnotesize},
+			max space between ticks=30,
+		}
 }
 % Legendeneintrage standardmäßig links ausrichten
 \pgfplotsset{legend cell align=left}
