@@ -46,6 +46,35 @@
 \setbeamercovered{transparent}
 \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}\usepackage{palatino}
 
+% Change background single frame
+\newcommand{\bfa}{\setbeamercolor{background canvas}{bg=digiPH_ocean!90}}
+\newcommand{\bfb}{\setbeamercolor{background canvas}{bg=digiPH_leaf!90}}
+\newcommand{\bfc}{\setbeamercolor{background canvas}{bg=digiPH_stem!90}}
+
+\newcommand{\ntex}{\setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}}
+
+\newcommand{\myft}[1]{\frametitle{\textcolor{white}{#1}}}
+
+%new block environment
+\newenvironment{blockcolor}
+  {\begin{alertblock}
+  }
+    {
+
+    \centering
+    \includegraphics[width=2cm,trim={0cm 10cm 0cm 9cm}, clip]{figures/batik.png}
+    \end{alertblock}
+    }
+
+% Creating centering notes
+\newcommand{\notec}[1]{\note{\vfill
+%    \begin{center}
+        {#1}
+%    \end{center}
+\vfill
+}}
+
+
 %----------------------------------------------------------------------------------------
 %           SOMETHING ABOUT LABELING
 %----------------------------------------------------------------------------------------
