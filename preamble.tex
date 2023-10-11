@@ -47,6 +47,16 @@
 \setbeamercovered{transparent}
 \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}\usepackage{palatino}
 
+
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array} %Mostly formatting columns and spacing
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %centering elemen in table
+\newcommand{\tabitem}{~\llap{\textbullet}} % fake bullet itemize in table cell
+\newcommand{\tabitems}{~~\llap{\textbullet}~~}
+
+
 %----------------------------------------------------------------------------------------
 %           SOMETHING ABOUT LABELING
 %----------------------------------------------------------------------------------------
