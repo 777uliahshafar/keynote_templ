@@ -48,6 +48,8 @@
 \setbeamercolor{block title example}{fg=digiPH_darkblue,bg=digiPH_orange}
 \setbeamercolor{block body example}{bg=digiPH_ocean!5}
 
+\setbeamerfont{frametitle}{size=\fontsize{20}{24}}
+\setbeamerfont{framesubtitle}{size=\fontsize{14}{18}}
 
 % Navigationssymbole ausschalten
 \setbeamertemplate{navigation symbols}{}
@@ -60,45 +62,34 @@
 }{}
 
 % Show line in frametitle
+\makeatletter
 \setbeamertemplate{frametitle}{%
-	\usebeamerfont{frametitle}\insertframetitle\strut%
-	\vskip-.25\baselineskip%
-	\leaders\vrule width \paperwidth\vskip0.4pt%
-	\vskip0pt%
-	\nointerlineskip
+	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+	\@tempdima=\textwidth%
+	\advance\@tempdima by\beamer@leftmargin%
+	\advance\@tempdima by\beamer@rightmargin%
+	\begin{beamercolorbox}[sep=0.5cm,left,wd=\the\@tempdima]{frametitle}
+		\usebeamerfont{frametitle}%
+		\vbox{}\vskip-0.25ex%
+		\if@tempswa\else\csname beamer@fteleft\endcsname\fi%
+		\strut\insertframetitle\strut\par%
+		\vskip-.25\baselineskip%
+		\leaders\vrule width \paperwidth\vskip0.4pt%
+		\vskip2pt%
+		\nointerlineskip
+		{%
+			\ifx\insertframesubtitle\@empty%
+				\else%
+				{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+			\fi
+		}%
+		\vskip-1ex%
+		\if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+	\end{beamercolorbox}%
 }
+\makeatother
 
-% Titelseite
-\setbeamertemplate{title page}{%
-	% obere Logos
-	\includegraphics[width=2.5cm]{logos/logo2}%
-	\hfill
-	\includegraphics[width=1.5cm]{logos/logo}
-	% vertikaler Abstand
-	\vskip0pt plus 1fill
 
-	% Titel
-	\colorbox{digiPH_orange}{\begin{minipage}{.95\textwidth}
-			\usebeamerfont{title}\inserttitle\par
-		\end{minipage}}
-
-	% unteres Logo
-	\includegraphics[width=8cm]{logos/hor_logo}
-
-}
-
-\addtobeamertemplate{title page}{%
-	\begin{pgfpicture}
-		\pgf@relevantforpicturesizefalse
-		\pgftransformxshift{-\Gm@lmargin}
-		\pgftransformyshift{25pt}
-		\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
-		\pgfsetfillcolor{digiPH_darkblue}
-		\pgfusepath{fill}
-		\pgftext[at=\pgfpoint{.5\paperwidth}{-.2\paperheight},center,bottom]{\pgfuseimage{large-logo}}
-	\end{pgfpicture}%
-	\vskip36pt%
-}{}
 
 
 
