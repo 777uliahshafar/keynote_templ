@@ -11,51 +11,111 @@
 \usecolortheme{dove}
 
 % orange Farbe definieren
+
+\definecolor{digiPH_darkblue}{RGB}{0,21,70}
+\definecolor{digiPH_ocean}{RGB}{35,58,100}
+\definecolor{digiPH_leaf}{RGB}{29,92,67}
+\definecolor{digiPH_stem}{RGB}{112,108,59}
 \definecolor{digiPH_orange}{rgb}{1,0.753,0}
 \definecolor{digiPH_darkorange}{rgb}{0.808,0.451,0.216}
 \definecolor{digiPH_blue}{rgb}{0.357,0.608,0.835}
+\definecolor{digiPH_gray}{RGB}{239,239,239}
+\definecolor{digiPH_undip}{RGB}{55,89,133}
 
 % Farben anpassen
+\setbeamercolor{title}{fg=digiPH_orange!89}
+\setbeamercolor{author}{fg=digiPH_orange!40}
+\setbeamercolor{date}{fg=digiPH_darkblue!80}
+\setbeamercolor{institute}{fg=digiPH_darkblue!80}
 \setbeamercolor{section number projected}{bg=digiPH_darkorange}
-%\setbeamercolor{frametitle}{fg=digiPH_darkorange,bg=white}
-\setbeamercolor{itemize item}{fg=digiPH_darkorange}
-\setbeamercolor{itemize subitem}{fg=digiPH_darkorange}
-\setbeamercolor{enumerate item}{fg=digiPH_darkorange}
-\setbeamercolor{enumerate subitem}{fg=digiPH_darkorange}
-\setbeamercolor{caption name}{fg=digiPH_darkorange}
-\setbeamercolor{block title}{fg=digiPH_blue}
-\setbeamercolor{mini frame}{fg=digiPH_orange}
-\setbeamercolor{section in head/foot}{fg=digiPH_darkorange}
-\setbeamercolor{section in toc shaded}{fg=digiPH_darkorange!50}
-\setbeamercolor{section in toc}{fg=digiPH_darkorange!150}
-\setbeamercolor{subsection in toc shaded}{fg=digiPH_darkorange!50}
-\setbeamercolor{subsection in toc}{fg=digiPH_darkorange!150}
+\setbeamercolor{frametitle}{fg=digiPH_darkblue,bg=white}
+\setbeamercolor{itemize item}{fg=digiPH_darkblue}
+\setbeamercolor{itemize subitem}{fg=digiPH_darkblue}
+\setbeamercolor{enumerate item}{fg=digiPH_darkblue}
+\setbeamercolor{enumerate subitem}{fg=digiPH_darkblue}
+\setbeamercolor{caption name}{fg=digiPH_darkblue}
+\setbeamercolor{mini frame}{fg=digiPH_undip!80}
+\setbeamercolor{section in head/foot}{fg=digiPH_undip}
+\setbeamercolor{section in toc shaded}{fg=digiPH_darkblue!50}
+\setbeamercolor{section in toc}{fg=digiPH_darkblue!150}
+\setbeamercolor{subsection in toc shaded}{fg=digiPH_darkblue!50}
+\setbeamercolor{subsection in toc}{fg=digiPH_darkblue!150}
+%Customization block
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{fg=digiPH_ocean,bg=digiPH_gray!170}
+\setbeamercolor{block body}{bg=digiPH_gray!35}
+\setbeamercolor{block title alerted}{fg=digiPH_ocean,bg=digiPH_gray!170}
+\setbeamercolor{block body alerted}{bg=digiPH_leaf!25}
+\setbeamercolor{block title example}{fg=digiPH_darkblue,bg=digiPH_orange}
+\setbeamercolor{block body example}{bg=digiPH_ocean!5}
+
+\pgfdeclareimage[width=.26\paperwidth]{large-logo}{Undip-logo}
+\pgfdeclareimage[width=\paperwidth]{footer}{footer}
 
 % Navigationssymbole ausschalten
 \setbeamertemplate{navigation symbols}{}
 
 \newenvironment{withoutheadline}{%
-	\setbeamercolor{background canvas}{bg=white}
+	\setbeamercolor{background canvas}{bg=yellow}
 	\setbeamertemplate{headline}[default]%
 	\def\beamer@entrycode{\vspace*{-\headheight}}%
 	\setbeamertemplate{footline}{}
 }{}
 
+% Show line in frametitle
+\setbeamertemplate{frametitle}{%
+    \usebeamerfont{frametitle}\insertframetitle\strut%
+    \vskip-.25\baselineskip%
+    \leaders\vrule width \paperwidth\vskip0.4pt%
+    \vskip0pt%
+    \nointerlineskip
+}
+
 % Titelseite
-\setbeamertemplate{title page}{%
-	% obere Logos
-	\includegraphics[width=2.5cm]{logos/logo2}%
-	\hfill
-	\includegraphics[width=1.5cm]{logos/logo}
-	% vertikaler Abstand
-	\vskip0pt plus 1fill
+%\setbeamertemplate{title page}{%
+%
+%	% Titel
+%	\vskip0pt plus 1fill
+%	\colorbox{digiPH_orange!80}{\begin{minipage}{\textwidth}
+%		\usebeamerfont{title}\centering{\inserttitle\par}
+%	\end{minipage}}
+%	% obere Logos
+%	\vskip0pt plus 1fill
+%	\centering{\includegraphics[width=1.8cm]{logos/logo}}
+%	\vskip0pt plus 1fill
+%	\begin{minipage}{.95\textwidth}
+%		\usebeamerfont{title}\centering{\insertsubtitle\par}
+%	\end{minipage}
+%
+%	% vertikaler Abstand
+%	\vskip0pt plus 1fill
+%    \begin{center}
+%    \begin{tabular}{c c}
+%%
+%    \insertauthor & \insertinstitute\\
+%    \end{tabular}
+%    \end{center}
+%%
+%%	% unteres Logo
+%%%	\includegraphics[width=8cm,height=3cm]{logos/hor_logo}
+%%
+%}
 
-	% Titel
-	\colorbox{digiPH_orange}{\begin{minipage}{.95\textwidth}
-		\usebeamerfont{title}\inserttitle\par
-	\end{minipage}}
+\addtobeamertemplate{title page}{%
+\begin{pgfpicture}
+\pgf@relevantforpicturesizefalse
+\pgftransformxshift{-\Gm@lmargin}
+\pgftransformyshift{25pt}
+\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
+\pgfsetfillcolor{digiPH_darkblue}
+\pgfusepath{fill}
+\pgftext[at=\pgfpoint{.5\paperwidth}{-.2\paperheight},center,bottom]{\pgfuseimage{large-logo}}
+\end{pgfpicture}%
+\vskip36pt%
+}{}
 
-	% unteres Logo
-	\includegraphics[width=8cm]{logos/hor_logo}
 
+\setbeamertemplate{footline}{%
+\hfill\usebeamercolor[fg]{structure}\hspace*{10pt}\strut\vskip0pt%
+\pgfuseimage{footer}%
 }
