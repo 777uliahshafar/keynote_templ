@@ -9,7 +9,6 @@
 
 % This theme is nearly a black and white theme and useful for creating presentations that are easy to print on a black-and-white printer. The theme uses grayscale in certain unavoidable cases, but never color. It also changes the font of alerted text to bold face.
 \usecolortheme{dove}
-
 % orange Farbe definieren
 
 \definecolor{digiPH_darkblue}{RGB}{0,21,70}
@@ -49,14 +48,12 @@
 \setbeamercolor{block title example}{fg=digiPH_darkblue,bg=digiPH_orange}
 \setbeamercolor{block body example}{bg=digiPH_ocean!5}
 
-\pgfdeclareimage[width=.26\paperwidth]{large-logo}{Undip-logo}
-\pgfdeclareimage[width=\paperwidth]{footer}{footer}
 
 % Navigationssymbole ausschalten
 \setbeamertemplate{navigation symbols}{}
 
 \newenvironment{withoutheadline}{%
-	\setbeamercolor{background canvas}{bg=yellow}
+	\setbeamercolor{background canvas}{bg=white}
 	\setbeamertemplate{headline}[default]%
 	\def\beamer@entrycode{\vspace*{-\headheight}}%
 	\setbeamertemplate{footline}{}
@@ -64,58 +61,44 @@
 
 % Show line in frametitle
 \setbeamertemplate{frametitle}{%
-    \usebeamerfont{frametitle}\insertframetitle\strut%
-    \vskip-.25\baselineskip%
-    \leaders\vrule width \paperwidth\vskip0.4pt%
-    \vskip0pt%
-    \nointerlineskip
+	\usebeamerfont{frametitle}\insertframetitle\strut%
+	\vskip-.25\baselineskip%
+	\leaders\vrule width \paperwidth\vskip0.4pt%
+	\vskip0pt%
+	\nointerlineskip
 }
 
 % Titelseite
-%\setbeamertemplate{title page}{%
-%
-%	% Titel
-%	\vskip0pt plus 1fill
-%	\colorbox{digiPH_orange!80}{\begin{minipage}{\textwidth}
-%		\usebeamerfont{title}\centering{\inserttitle\par}
-%	\end{minipage}}
-%	% obere Logos
-%	\vskip0pt plus 1fill
-%	\centering{\includegraphics[width=1.8cm]{logos/logo}}
-%	\vskip0pt plus 1fill
-%	\begin{minipage}{.95\textwidth}
-%		\usebeamerfont{title}\centering{\insertsubtitle\par}
-%	\end{minipage}
-%
-%	% vertikaler Abstand
-%	\vskip0pt plus 1fill
-%    \begin{center}
-%    \begin{tabular}{c c}
-%%
-%    \insertauthor & \insertinstitute\\
-%    \end{tabular}
-%    \end{center}
-%%
-%%	% unteres Logo
-%%%	\includegraphics[width=8cm,height=3cm]{logos/hor_logo}
-%%
-%}
+\setbeamertemplate{title page}{%
+	% obere Logos
+	\includegraphics[width=2.5cm]{logos/logo2}%
+	\hfill
+	\includegraphics[width=1.5cm]{logos/logo}
+	% vertikaler Abstand
+	\vskip0pt plus 1fill
+
+	% Titel
+	\colorbox{digiPH_orange}{\begin{minipage}{.95\textwidth}
+			\usebeamerfont{title}\inserttitle\par
+		\end{minipage}}
+
+	% unteres Logo
+	\includegraphics[width=8cm]{logos/hor_logo}
+
+}
 
 \addtobeamertemplate{title page}{%
-\begin{pgfpicture}
-\pgf@relevantforpicturesizefalse
-\pgftransformxshift{-\Gm@lmargin}
-\pgftransformyshift{25pt}
-\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
-\pgfsetfillcolor{digiPH_darkblue}
-\pgfusepath{fill}
-\pgftext[at=\pgfpoint{.5\paperwidth}{-.2\paperheight},center,bottom]{\pgfuseimage{large-logo}}
-\end{pgfpicture}%
-\vskip36pt%
+	\begin{pgfpicture}
+		\pgf@relevantforpicturesizefalse
+		\pgftransformxshift{-\Gm@lmargin}
+		\pgftransformyshift{25pt}
+		\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
+		\pgfsetfillcolor{digiPH_darkblue}
+		\pgfusepath{fill}
+		\pgftext[at=\pgfpoint{.5\paperwidth}{-.2\paperheight},center,bottom]{\pgfuseimage{large-logo}}
+	\end{pgfpicture}%
+	\vskip36pt%
 }{}
 
 
-\setbeamertemplate{footline}{%
-\hfill\usebeamercolor[fg]{structure}\hspace*{10pt}\strut\vskip0pt%
-\pgfuseimage{footer}%
-}
+
