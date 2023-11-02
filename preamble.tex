@@ -60,6 +60,12 @@
 \newcommand{\tabitem}{~\llap{\textbullet}} % fake bullet itemize in table cell
 \newcommand{\tabitems}{~~\llap{\textbullet}~~}
 
+% Itemize
+\usepackage{enumitem} %3 lines after this resolve bullet disappear and adjust spacing
+\setitemize{label=\usebeamerfont*{itemize item}%
+	\usebeamercolor[fg]{itemize item}
+	\usebeamertemplate{itemize item},noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
 
 %----------------------------------------------------------------------------------------
 %           SOMETHING ABOUT LABELING
