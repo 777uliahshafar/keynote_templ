@@ -20,6 +20,7 @@
 \definecolor{digiPH_blue}{rgb}{0.357,0.608,0.835}
 \definecolor{digiPH_gray}{RGB}{239,239,239}
 \definecolor{digiPH_undip}{RGB}{55,89,133}
+\definecolor{digiPH_writer}{RGB}{29,32,33}
 
 % Farben anpassen
 \setbeamercolor{title}{fg=digiPH_orange!89}
@@ -160,9 +161,22 @@
 	\begin{tikzpicture}
 		\useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
 		\fill[fill=#1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-		\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,\the\paperheight) {This text should be in the upper left corner};
+		\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,\the\paperheight) {};
 	\end{tikzpicture}
 }
+
+
+%-----------------------------------------------------------------------
+% stabilizer to default
+%
+%-----------------------------------------------------------------------
+\BeforeBeginEnvironment{frame}{%
+	\setbeamertemplate{background canvas}[color][white]%
+	\setbeamertemplate{frametitle}[standard]
+	\setbeamercolor{frametitle}{fg=digiPH_writer}
+	\setbeamercolor{normal text}{fg=digiPH_writer}\usebeamercolor*{normal text}%
+}
+
 
 %-----------------------------------------------------------------------
 % define key NB: The order is crucial
