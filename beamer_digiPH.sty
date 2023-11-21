@@ -61,7 +61,10 @@
 	\setbeamertemplate{footline}{}
 }{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------------------------------------
+% frametitle
+%
+%-----------------------------------------------------------------------
 
 \makeatletter
 \defbeamertemplate{frametitle}{standard}
@@ -70,7 +73,7 @@
 	\@tempdima=\textwidth%
 	\advance\@tempdima by\beamer@leftmargin%
 	\advance\@tempdima by\beamer@rightmargin%
-	\pgfsetfillopacity{.2}%fill opacity
+	\pgfsetfillopacity{.9}%fill opacity
 	\begin{beamercolorbox}[sep=0.5cm,left,wd=\the\@tempdima]{frametitle}
 		\usebeamerfont{frametitle}%
 		\vbox{}\vskip-0.25ex%
@@ -146,3 +149,52 @@
 }
 
 \makeatother
+
+
+%-----------------------------------------------------------------------
+% background canvas color
+%
+%-----------------------------------------------------------------------
+\makeatletter
+\defbeamertemplate{background canvas}{color}[1][white]{%
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[fill=#1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,\the\paperheight) {This text should be in the upper left corner};
+  \end{tikzpicture}
+}
+
+%-----------------------------------------------------------------------
+% define key
+%
+%-----------------------------------------------------------------------
+
+
+\makeatletter
+\define@key{beamerframe}{white}[true]{%
+  \setbeamertemplate{background canvas}[color][white]%
+}
+\define@key{beamerframe}{ocean}[true]{%
+  \setbeamertemplate{background canvas}[color][digiPH_ocean!90]%
+  \setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
+}
+\define@key{beamerframe}{leaf}[true]{%
+  \setbeamertemplate{background canvas}[color][digiPH_leaf!90]%
+  \setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
+}
+\define@key{beamerframe}{stem}[true]{%
+  \setbeamertemplate{background canvas}[color][digiPH_stem!90]%
+  \setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
+}
+\define@key{beamerframe}{standard}[true]{%
+    \setbeamertemplate{frametitle}[style][standard]
+}
+\define@key{beamerframe}{imageplus}[true]{%
+    \setbeamertemplate{frametitle}[style][imageplus]
+}
+\define@key{beamerframe}{center}[true]{%
+    \setbeamertemplate{frametitle}[style][center]
+}
+
+\makeatother
+
