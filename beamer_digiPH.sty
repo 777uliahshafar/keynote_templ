@@ -68,11 +68,12 @@
 	\@tempdima=\textwidth%
 	\advance\@tempdima by\beamer@leftmargin%
 	\advance\@tempdima by\beamer@rightmargin%
+	\pgfsetfillopacity{.2}%fill opacity
 	\begin{beamercolorbox}[sep=0.5cm,left,wd=\the\@tempdima]{frametitle}
 		\usebeamerfont{frametitle}%
 		\vbox{}\vskip-0.25ex%
 		\if@tempswa\else\csname beamer@fteleft\endcsname\fi%
-		\strut\insertframetitle\strut\par%
+		\strut\pgfsetfillopacity{1}\insertframetitle\strut\par%
 		\vskip-.25\baselineskip%
 		\leaders\vrule width \paperwidth\vskip0.4pt%
 		\vskip2pt%
