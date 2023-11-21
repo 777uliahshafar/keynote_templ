@@ -1,0 +1,30 @@
+% Standard center frametitle
+\makeatletter
+\setbeamertemplate{frametitle}{%
+	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+	\@tempdima=\textwidth%
+	\advance\@tempdima by\beamer@leftmargin%
+	\advance\@tempdima by\beamer@rightmargin%
+	\pgfsetfillopacity{.2}%fill opacity
+	\begin{beamercolorbox}[sep=0.5cm,left,wd=\the\@tempdima]{frametitle}
+		\usebeamerfont{frametitle}%
+		\vbox{}\vskip-0.25ex%
+		\if@tempswa\else\csname beamer@fteleft\endcsname\fi%
+		\strut\pgfsetfillopacity{1}\centering\insertframetitle\strut\par
+		\vskip-.25\baselineskip%
+		\leaders\vrule width \paperwidth\vskip0.4pt%
+		\vskip2pt%
+		\nointerlineskip
+		{%
+			\ifx\insertframesubtitle\@empty%
+				\else%
+				{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+			\fi
+		}%
+		\vskip-1ex%
+		\if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+	\end{beamercolorbox}%
+}
+\makeatother
+
+
