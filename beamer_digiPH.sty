@@ -192,21 +192,8 @@
 
 
 \makeatletter
-\define@key{beamerframe}{white}[true]{%
-	\setbeamertemplate{background canvas}[color][white]%
-}
-\define@key{beamerframe}{ocean}[true]{%
-	\setbeamertemplate{background canvas}[color][digiPH_ocean!90]%
-	\setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
-	\setbeamercolor{frametitle}{fg=white}
-}
-\define@key{beamerframe}{leaf}[true]{%
-	\setbeamertemplate{background canvas}[color][digiPH_leaf!90]%
-	\setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
-	\setbeamercolor{frametitle}{fg=white}
-}
-\define@key{beamerframe}{stem}[true]{%
-	\setbeamertemplate{background canvas}[color][digiPH_stem!90]%
+\define@key{beamerframe}{mycolor}[true]{%
+	\setbeamertemplate{background canvas}[color][#1]%
 	\setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
 	\setbeamercolor{frametitle}{fg=white}
 }
@@ -214,6 +201,6 @@
 	\setbeamertemplate{frametitle}[#1]
 }
 \define@key{beamerframe}{mybg}[true]{%
-    \setbeamertemplate{background canvas}[image][#1]%
+	\setbeamertemplate{background canvas}[image][#1]%
 }
 \makeatother
