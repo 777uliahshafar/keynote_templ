@@ -74,7 +74,7 @@
 	\@tempdima=\textwidth%
 	\advance\@tempdima by\beamer@leftmargin%
 	\advance\@tempdima by\beamer@rightmargin%
-	\pgfsetfillopacity{.9}%fill opacity
+	\pgfsetfillopacity{.15}%fill opacity
 	\begin{beamercolorbox}[sep=0.5cm,left,wd=\the\@tempdima]{frametitle}
 		\usebeamerfont{frametitle}%
 		\vbox{}\vskip-0.25ex%
@@ -165,7 +165,14 @@
 	\end{tikzpicture}
 }
 
+\defbeamertemplate{background canvas}{image}[1][placeholder]{%
+	\begin{tikzpicture}
+		\useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+		\includegraphics[width=\paperwidth,height=\paperheight]{#1} (0,0) rectangle (\the\paperwidth,\the\paperheight);
+		\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,\the\paperheight) {};
+	\end{tikzpicture}
 
+}
 %-----------------------------------------------------------------------
 % stabilizer to default
 %
@@ -205,5 +212,8 @@
 }
 \define@key{beamerframe}{mytitle}[true]{%
 	\setbeamertemplate{frametitle}[#1]
+}
+\define@key{beamerframe}{mybg}[true]{%
+    \setbeamertemplate{background canvas}[image][#1]%
 }
 \makeatother
