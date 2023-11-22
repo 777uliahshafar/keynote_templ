@@ -1,4 +1,4 @@
-%! TeX program = pdflatex
+%! TeX program = pdflatexpre
 
 \usepackage{beamer_digiPH}
 \usepackage[bahasai]{babel}
@@ -117,17 +117,26 @@
 %           BLOCK
 %----------------------------------------------------------------------------------------
 \usepackage[most]{tcolorbox}
-\newtcolorbox{simpleblock}{
+\newtcolorbox{tpblock}[2]{%
+	code={%
+			\usebeamercolor{block title}
+			\colorlet{titlebg}{#1}
+			\colorlet{titlefg}{#2}
+			\usebeamercolor{block body alerted}
+			\colorlet{bodybg}{#1}
+			\colorlet{bodyfg}{#2}
+		},
 	enhanced,
 	boxsep=0.25ex,
 	arc=1.25ex,
 	opacityframe=.2,
 	opacityback=.2,
-	colback=white,
-	colframe=white,
-	boxrule=0pt
+	colbacktitle=titlebg,
+	coltitle=titlefg,
+	colback=bodybg,
+	colupper=bodyfg,
+	boxrule=0pt,
 }
-
 
 %----------------------------------------------------------------------------------------
 %           TIKZ PLOT CONFIGURATION
