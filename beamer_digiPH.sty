@@ -42,6 +42,7 @@
 \setbeamercolor{subsection in toc}{fg=digiPH_darkblue!150}
 %Customization block
 \setbeamertemplate{blocks}[rounded][shadow=false]
+\addtobeamertemplate{block begin}{\pgfsetfillopacity{0.3}}{\pgfsetfillopacity{1}}
 \setbeamercolor{block title}{fg=digiPH_darkblue,bg=digiPH_gray!35}
 \setbeamercolor{block body}{bg=digiPH_gray}
 \setbeamercolor{block title alerted}{fg=digiPH_ocean,bg=digiPH_gray!170}
@@ -61,12 +62,6 @@
 	\def\beamer@entrycode{\vspace*{-\headheight}}%
 	\setbeamertemplate{footline}{}
 }{}
-
-%-----------------------------------------------------------------------
-% block
-%
-%-----------------------------------------------------------------------
-\addtobeamertemplate{block begin}{\pgfsetfillopacity{0.3}}{\pgfsetfillopacity{1}}
 
 %-----------------------------------------------------------------------
 % frametitle
