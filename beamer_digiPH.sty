@@ -189,13 +189,17 @@
 % define key NB: The order is crucial
 %
 %-----------------------------------------------------------------------
-
-
 \makeatletter
-\define@key{beamerframe}{mycolor}[true]{%
-	\setbeamertemplate{background canvas}[color][#1]%
+\define@key{beamerframe}{dark}[true]{%
 	\setbeamercolor{normal text}{fg=white}\usebeamercolor*{normal text}%
 	\setbeamercolor{frametitle}{fg=white}
+}
+\define@key{beamerframe}{light}[true]{%
+	\setbeamercolor{normal text}{fg=digiPH_writer}\usebeamercolor*{normal text}%
+	\setbeamercolor{frametitle}{fg=digiPH_writer}
+}
+\define@key{beamerframe}{mycolor}[true]{%
+	\setbeamertemplate{background canvas}[color][#1]%
 }
 \define@key{beamerframe}{mytitle}[true]{%
 	\setbeamertemplate{frametitle}[#1]
