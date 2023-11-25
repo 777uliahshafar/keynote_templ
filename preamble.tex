@@ -117,14 +117,15 @@
 %           BLOCK
 %----------------------------------------------------------------------------------------
 \usepackage[most]{tcolorbox}
-\newtcolorbox{tpblock}[2]{%
+\newtcolorbox{tpblock}[3][]
+{%
 	code={%
 			\usebeamercolor{block title}
-			\colorlet{titlebg}{#1}
-			\colorlet{titlefg}{#2}
+			\colorlet{titlebg}{#2}
+			\colorlet{titlefg}{#3}
 			\usebeamercolor{block body alerted}
-			\colorlet{bodybg}{#1}
-			\colorlet{bodyfg}{#2}
+			\colorlet{bodybg}{#2}
+			\colorlet{bodyfg}{#3}
 		},
 	enhanced,
 	boxsep=0.25ex,
@@ -136,6 +137,7 @@
 	colback=bodybg,
 	colupper=bodyfg,
 	boxrule=0pt,
+	#1
 }
 
 %----------------------------------------------------------------------------------------
