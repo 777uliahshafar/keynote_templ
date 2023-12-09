@@ -23,7 +23,10 @@
 *.mtc
 *.mtc1
 *.out
+*.synctex(busy)
 *.synctex.gz
+*.synctex.gz(busy)
+*.synctex.gz.sum.synctex
 *.run.xml
 .DS_Store
 *.fls
