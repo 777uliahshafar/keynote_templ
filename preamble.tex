@@ -141,6 +141,16 @@
 	#1
 }
 
+\makeatletter
+\newbox\@bgblock
+\newenvironment{bgblock}[2]{%
+	\global\setbox\@bgblock=\vbox\bgroup%
+	\unvbox\@bgblock%
+	\vbox to0pt\bgroup\vskip#2\hbox to0pt\bgroup\hskip#1\relax%
+}{\egroup\egroup\egroup}
+\addtobeamertemplate{background}{\box\@bgblock}{}
+\makeatother
+
 %----------------------------------------------------------------------------------------
 %           TIKZ PLOT CONFIGURATION
 %----------------------------------------------------------------------------------------
