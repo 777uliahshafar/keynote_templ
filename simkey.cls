@@ -1,5 +1,35 @@
 %! TeX program = pdflatexpre
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Keynote
+% LaTeX Class
+% Version 1.0 (10/11/20)
+%
+% This class originates by:
+% Vel and  Nicolas Diaz
+%
+% Authors:
+% Muhammad Uliah Shafar
+%
+%
+% Free License:
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	CLASS CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{simkey}[2020/11/10 Simart Class v1.0]
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}} % Pass through any options to the base class
+\ProcessOptions\relax % Process given options
+
+\LoadClass{beamer} % Load the base class
+
+
 \usepackage{beamer_digiPH}
 \usepackage[bahasai]{babel}
 
