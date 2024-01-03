@@ -89,6 +89,10 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %centering elemen in table
 \newcommand{\tabitem}{~~\llap{\textbullet}~~} % fake bullet itemize in table cell, don't use it on notes
 
+\newcommand\boldblue[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand\boldred[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand\boldwhite[1]{\textcolor{white}{\textbf{#1}}}
+
 % Itemize
 \usepackage{enumitem} %3 lines after this resolve bullet disappear and adjust spacing
 \setitemize{label=\usebeamerfont*{itemize item}%
