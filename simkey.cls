@@ -146,7 +146,111 @@
 		\vfill
 	}}
 
-\newcommand{\boxes}[3]{\begin{tpblock}{#1}{#2} #3 \end{tpblock}}
+\newcommand{\vrtwoimg}[2]{
+	\begin{textblock*}{62mm}(64mm,25mm)
+		\includegraphics[width=64mm,height=35mm]{#1}
+	\end{textblock*}
+	\begin{textblock*}{62mm}(64mm,61mm)
+		\includegraphics[width=64mm,height=34mm]{#2}
+	\end{textblock*}
+}
+
+\newcommand{\vltwoimg}[2]{
+\begin{textblock*}{64mm}(0mm,25mm)
+    \includegraphics[width=64mm,height=35mm]{#1}
+\end{textblock*}
+\begin{textblock*}{64mm}(0mm,61mm)
+    \includegraphics[width=64mm,height=34mm]{#2}
+\end{textblock*}
+}
+
+\newcommand{\vrthreeimg}[3]{
+	\begin{textblock*}{44mm}(0mm,25mm)
+		\includegraphics[width=44mm,height=23mm]{#1}
+	\end{textblock*}
+	\begin{textblock*}{44mm}(0mm,49mm)
+		\includegraphics[width=44mm,height=23mm]{#2}
+	\end{textblock*}
+	\begin{textblock*}{44mm}(0mm,73mm)
+		\includegraphics[width=44mm,height=22mm]{#3}
+	\end{textblock*}
+}
+
+\newcommand{\vlthreeimg}[3]{
+	\begin{textblock*}{44mm}(0mm,25mm)
+		\includegraphics[width=44mm,height=23mm]{#1}
+	\end{textblock*}
+	\begin{textblock*}{44mm}(0mm,49mm)
+		\includegraphics[width=44mm,height=23mm]{#2}
+	\end{textblock*}
+	\begin{textblock*}{44mm}(0mm,73mm)
+		\includegraphics[width=44mm,height=22mm]{#3}
+	\end{textblock*}
+}
+
+\newcommand{\htwoimg}[2]{
+	\begin{textblock*}{63mm}(0mm,59mm)
+		\includegraphics[width=64mm,height=35mm]{#1}
+	\end{textblock*}
+	\begin{textblock*}{62mm}(65mm,59mm)
+		\includegraphics[width=64mm,height=35mm]{#2}
+	\end{textblock*}
+}
+
+
+\newcommand{\hthreeimg}[3]{
+	\begin{textblock*}{42mm}(0mm,66mm)
+		\includegraphics[width=42mm,height=24mm]{#1}
+	\end{textblock*}
+	\begin{textblock*}{42mm}(43mm,66mm)
+		\includegraphics[width=42mm,height=24mm]{#2}
+	\end{textblock*}
+	\begin{textblock*}{42mm}(86mm,66mm)
+		\includegraphics[width=42mm,height=24mm]{#3}
+	\end{textblock*}
+}
+
+\newcommand{\limg}[1]{
+\begin{textblock*}{60mm}(0mm,24mm)
+    \includegraphics[width=60mm,height=68mm]{#1}
+\end{textblock*}
+}
+
+\newcommand{\rimg}[1]{
+\begin{textblock*}{60mm}(68mm,24mm)
+    \includegraphics[width=60mm,height=68mm]{#1}
+\end{textblock*}
+}
+
+\newcommand{\ltxt}[3]{
+	\begin{textblock*}{62mm}(3mm,24mm)
+		\begin{tpblock}{#1}{#2}
+            #3
+		\end{tpblock}
+	\end{textblock*}
+}
+
+\newcommand{\rtxt}[3]{
+	\begin{textblock*}{62mm}(64mm,24mm)
+		\begin{tpblock}{#1}{#2}
+            #3
+		\end{tpblock}
+	\end{textblock*}
+}
+
+\newcommand{\utxt}[3]{
+	\begin{textblock*}{120mm}(5mm,26mm)
+		\begin{tpblock}{#1}{#2}
+            #3
+		\end{tpblock}
+	\end{textblock*}
+}
+
+\newcommand{\txt}[3]{
+    \begin{tpblock}{#1}{#2}
+            #3
+    \end{tpblock}
+}
 
 %----------------------------------------------------------------------------------------
 %           BLOCK
@@ -166,7 +270,7 @@
 	boxsep=0.25ex,
 	arc=1.25ex,
 	opacityframe=0,
-	opacityback=.28,
+	opacityback=.64,
 	colbacktitle=titlebg,
 	coltitle=titlefg,
 	colback=bodybg,
