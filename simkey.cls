@@ -231,7 +231,7 @@
 }
 
 \newcommand{\rtxt}[3]{
-	\begin{textblock*}{62mm}(64mm,24mm)
+	\begin{textblock*}{60mm}(66mm,24mm)
 		\begin{tpblock}{#1}{#2}
             #3
 		\end{tpblock}
