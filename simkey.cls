@@ -210,6 +210,18 @@
 	\end{textblock*}
 }
 
+\newcommand{\uimg}[1]{
+	\begin{textblock*}{115mm}(35mm,18mm)
+		\includegraphics[width=55mm]{#1}
+	\end{textblock*}
+}
+
+\newcommand{\bimg}[1]{
+	\begin{textblock*}{115mm}(35mm,55mm)
+		\includegraphics[width=55mm]{#1}
+	\end{textblock*}
+}
+
 \newcommand{\limg}[1]{
 \begin{textblock*}{60mm}(0mm,24mm)
     \includegraphics[width=60mm,height=68mm]{#1}
@@ -240,6 +252,14 @@
 
 \newcommand{\utxt}[3]{
 	\begin{textblock*}{120mm}(5mm,26mm)
+		\begin{tpblock}{#1}{#2}
+            #3
+		\end{tpblock}
+	\end{textblock*}
+}
+
+\newcommand{\btxt}[3]{
+	\begin{textblock*}{120mm}(5mm,55mm)
 		\begin{tpblock}{#1}{#2}
             #3
 		\end{tpblock}
