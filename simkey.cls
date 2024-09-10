@@ -210,16 +210,9 @@
 	\end{textblock*}
 }
 
-\newcommand{\uimg}[1]{
-	\begin{textblock*}{115mm}(35mm,18mm)
-		\includegraphics[width=55mm]{#1}
-	\end{textblock*}
-}
-
-\newcommand{\bimg}[1]{
-	\begin{textblock*}{115mm}(35mm,55mm)
-		\includegraphics[width=55mm]{#1}
-	\end{textblock*}
+\newcommand{\bimg}[2]{
+    \vspace{28mm}
+	\includegraphics[width=#1]{#2}
 }
 
 \newcommand{\limg}[1]{
