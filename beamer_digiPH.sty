@@ -220,3 +220,16 @@
 	\setbeamertemplate{background canvas}[image][#1]%
 }
 \makeatother
+
+
+%-----------------------------------------------------------------------
+% footer
+%
+%-----------------------------------------------------------------------
+
+\pgfdeclareimage[width=\paperwidth]{footer}{footer}
+
+\setbeamertemplate{footline}{%
+	\hfill\usebeamercolor[fg]{structure}\hspace*{10pt}\strut\vskip0pt%
+	\pgfuseimage{footer}%
+}
