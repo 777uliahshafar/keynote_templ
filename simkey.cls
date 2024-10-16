@@ -233,6 +233,12 @@
 \end{bgblock}
 }
 
+\newcommand{\hbgimg}[1]{
+\begin{bgblock}{0mm}{0mm}%130x95
+	\includegraphics[height=\paperheight]{#1}
+\end{bgblock}
+}
+
 \newcommand{\compactbgimg}[1]{
 \begin{bgblock}{0mm}{0mm}%130x95
 	\includegraphics[width=\paperwidth, height=\paperheight]{#1}
