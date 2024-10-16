@@ -233,6 +233,12 @@
 \end{bgblock}
 }
 
+\newcommand{\compactbgimg}[1]{
+\begin{bgblock}{0mm}{0mm}%130x95
+	\includegraphics[width=\paperwidth, height=\paperheight]{#1}
+\end{bgblock}
+}
+
 \newcommand{\ltxt}[3]{
 	\begin{textblock*}{62mm}(3mm,24mm)
 		\begin{tpblock}{#1}{#2}
