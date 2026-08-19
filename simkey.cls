@@ -296,7 +296,7 @@
 	}
 
 	\newcommand{\ltxt}[3]{
-		\begin{textblock*}{58mm}(3mm,24mm)
+		\begin{textblock*}{53mm}(3mm,24mm)
 			\begin{tpblock}{#1}{#2}
 				#3
 			\end{tpblock}
