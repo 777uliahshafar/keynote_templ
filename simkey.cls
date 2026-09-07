@@ -94,19 +94,36 @@
 \newcommand\boldwhite[1]{\textcolor{white}{\textbf{#1}}}
 
 % Itemize
-\usepackage{enumitem} %3 lines after this resolve bullet disappear and adjust spacing
-\setitemize[1]{label=\usebeamerfont*{itemize item}%
-	\usebeamercolor[fg]{itemize item}
-	\usebeamertemplate{itemize item}}
+\usepackage{enumitem}
 
-\setitemize[2]{label=\usebeamerfont*{itemize subitem}%
-	\usebeamercolor[fg]{itemize subitem}
-	\usebeamertemplate{itemize subitem}}
+% --- Konfigurasi Itemize ---
+\setitemize[1]{label=\protect\usebeamerfont*{itemize item}%
+	\protect\usebeamercolor[fg]{itemize item}%
+	\protect\usebeamertemplate{itemize item}}
 
-\setitemize[3]{label=\usebeamerfont*{itemize subsubitem}%
-	\usebeamercolor[fg]{itemize subsubitem}
-	\usebeamertemplate{itemize subsubitem}}
+\setitemize[2]{label=\protect\usebeamerfont*{itemize subitem}%
+	\protect\usebeamercolor[fg]{itemize subitem}%
+	\protect\usebeamertemplate{itemize subitem}}
+
+\setitemize[3]{label=\protect\usebeamerfont*{itemize subsubitem}%
+	\protect\usebeamercolor[fg]{itemize subsubitem}%
+	\protect\usebeamertemplate{itemize subsubitem}}
+
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt} % <-- Tambahkan baris ini
+
+% --- Konfigurasi Enumerate Tingkat 1 (Bebas Eror) ---
+\setlist[enumerate,1]{%
+	label={\protect\usebeamerfont*{itemize item}%
+			\protect\usebeamercolor[fg]{itemize item}%
+			\arabic*.}
+}
+
+\setlist[enumerate,2]{%
+	label={\protect\usebeamerfont*{itemize subitem}%
+			\protect\usebeamercolor[fg]{itemize subitem}%
+			\alph*.}
+}
 
 % pagenumber
 \setbeamercolor{footline}{fg=blue}
